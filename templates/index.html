@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prediksi Penyakit Stroke</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body >
+    <div class="container d-flex align-items-center justify-content-center h-100 " >
+        <div class="contact-form" >
+            <form action="{{ url_for('home')}}" method="post">
+                <h3 class="text-center mb-4">Prediksi Penyakit Stroke</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="gender">Gender:</label>
+                            <select name="gender" class="form-select form-control" required="required">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age:</label>
+                            <input type="text" name="age" class="form-control" placeholder="Age" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="hypertension">Hypertension (1 if yes, 0 if no):</label>
+                            <input type="text" name="hypertension" class="form-control" placeholder="Hypertension"
+                                required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="heart_disease">Heart Disease (1 if yes, 0 if no):</label>
+                            <input type="text" name="heart_disease" class="form-control" placeholder="Heart Disease"
+                                required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="work_type">Work Type:</label>
+                            <select name="work_type" class="form-select form-control" required="required">
+                                <option value="Private">Private</option>
+                                <option value="Self-employed">Self-employed</option>
+                                <option value="children">Children</option>
+                                <option value="Govt_job">Govt Job</option>
+                                <option value="Never_worked">Never Worked</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="avg_glucose_level">Average Glucose Level:</label>
+                            <input type="text" name="avg_glucose_level" class="form-control"
+                                placeholder="Average Glucose Level" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="bmi">BMI:</label>
+                            <input type="text" name="bmi" class="form-control" placeholder="BMI" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="smoking_status">Smoking Status:</label>
+                            <select name="smoking_status" class="form-select form-control" required="required">
+                                <option value="formerly_smoked">Formerly Smoked</option>
+                                <option value="never_smoked">Never Smoked</option>
+                                <option value="unknown">Unknown</option>
+                                <option value="smokes">Smokes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="metode">Select Method:</label>
+                            <select name="metode" class="form-select form-control" required="required">
+                                <option value="knn">KNN</option>
+                                <option value="naive_bayes">Naive Bayes</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Predict</button>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-primary mb-4">Data Inputan : </h4>
+                        <ul class="list-unstyled">
+                            <li><strong>Gender:</strong> {{ dataInputan['gender'] }}</li>
+                            <li><strong>Age:</strong> {{ dataInputan['age'] }}</li>
+                            <li><strong>Hypertension:</strong> {{ dataInputan['hypertension'] }}</li>
+                            <li><strong>Heart Disease:</strong> {{ dataInputan['heart_disease'] }}</li>
+                            <li><strong>Work Type:</strong> {{ dataInputan['work_type'] }}</li>
+                            <li><strong>Average Glucose Level:</strong> {{ dataInputan['avg_glucose_level'] }}</li>
+                            <li><strong>BMI:</strong> {{ dataInputan['bmi'] }}</li>
+                            <li><strong>Smoking Status:</strong> {{ dataInputan['smoking_status'] }}</li>
+                            <li><strong>Metode:</strong> {{ dataInputan['metode'] }}</li>
+                        </ul>
+                        <h4 class="text-primary mb-4">Hasil Prediksi :
+                            <div class="text-center mb-4">
+                                <br>
+                                {% if result is defined and dataInputan %}
+                                    <h5 class="{% if result == 1 %}text-danger{% else %}text-warning{% endif %}">
+                                        {% if result == 1 %}
+                                            Terkena Stroke
+                                        {% else %}
+                                            Tidak Terkena Stroke
+                                        {% endif %}
+                                    </h5>
+                                {% else %}
+                                    {% if dataInputan %}
+                                        <p>Waiting for prediction...</p>
+                                    {% endif %}
+                                {% endif %}
+                            </div>
+                        </h4>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy7u8bqU3G07Z09M8kOnqqC5gDAU8E+kl6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

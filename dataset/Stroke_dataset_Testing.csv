@@ -1,0 +1,32 @@
+﻿id,gender,age,hypertension,heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status,stroke
+9046,Male,67,0,1,Yes,Private,Urban,228.69,36.6,formerly smoked,1
+51676,Female,61,0,0,Yes,Self-employed,Rural,202.21,N/A,never smoked,1
+31112,Male,80,0,1,Yes,Private,Rural,105.92,32.5,never smoked,1
+60182,Female,49,0,0,Yes,Private,Urban,171.23,34.4,smokes,1
+1665,Female,79,1,0,Yes,Self-employed,Rural,174.12,24,never smoked,1
+56669,Male,81,0,0,Yes,Private,Urban,186.21,29,formerly smoked,1
+53882,Male,74,1,1,Yes,Private,Rural,70.09,27.4,never smoked,1
+10434,Female,69,0,0,No,Private,Urban,94.39,22.8,never smoked,1
+27419,Female,59,0,0,Yes,Private,Rural,76.15,N/A,Unknown,1
+60491,Female,78,0,0,Yes,Private,Urban,58.57,24.2,Unknown,1
+12109,Female,81,1,0,Yes,Private,Rural,80.43,29.7,never smoked,1
+12095,Female,61,0,1,Yes,Govt_job,Rural,120.46,36.8,smokes,1
+12175,Female,54,0,0,Yes,Private,Urban,104.51,27.3,smokes,1
+8213,Male,78,0,1,Yes,Private,Urban,219.84,N/A,Unknown,1
+5317,Female,79,0,1,Yes,Private,Urban,214.09,28.2,never smoked,1
+52173,Male,38,0,0,No,Self-employed,Urban,74.09,39.6,never smoked,0
+5708,Female,20,0,0,No,Private,Urban,91.6,28.1,never smoked,0
+23462,Female,17,0,0,No,Private,Urban,87.52,39.2,never smoked,0
+2374,Male,60,1,0,Yes,Private,Rural,213.37,36,never smoked,0
+11091,Female,75,0,0,Yes,Self-employed,Rural,75.39,37.8,never smoked,0
+70374,Female,31,0,0,Yes,Private,Rural,122.41,40.3,smokes,0
+15528,Male,58,1,0,Yes,Private,Rural,223.36,41.5,formerly smoked,0
+65357,Female,5,0,0,No,children,Rural,84.59,17.7,Unknown,0
+49465,Female,13,0,0,No,children,Urban,70.16,21.2,never smoked,0
+31143,Female,22,0,0,No,Private,Rural,107.52,41.6,Unknown,0
+66972,Female,52,0,0,Yes,Govt_job,Urban,80.88,23.8,smokes,0
+55810,Female,61,0,0,Yes,Self-employed,Rural,93.48,23.7,Unknown,0
+37031,Female,78,0,1,Yes,Govt_job,Urban,70.21,24.8,never smoked,0
+34608,Male,57,0,0,Yes,Private,Rural,86.67,39,Unknown,0
+36007,Female,21,0,0,Yes,Private,Rural,101.37,37.9,never smoked,0
+14123,Female,22,0,0,Yes,Private,Rural,105.22,31.1,never smoked,0
